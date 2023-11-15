@@ -2,13 +2,13 @@
 #define PRACTICE_H
 
 #include <string>
-
+#include <vector>
 using std::string;
-
+using std::vector;
 class Password
 {
 private:
-
+  vector<string> pass_history;
 public:
   /*
   The function receives a string counts how many times the same character 
@@ -24,5 +24,10 @@ public:
   */
   bool has_mixed_case(string);
   
+  Password();
+
+  void set(string);
+
+  bool authenticate(string);
 };
 #endif

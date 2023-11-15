@@ -72,27 +72,31 @@ TEST(PasswordTest, testMixed) {
 
  }
 
-//TEST(PasswordTest, empty_password {
-//    Password my_password;
-//    int actual = my_password.count_leading_characters("");
-//    ASSERT_EQ(0,actual);
+TEST(PasswordTest, empty_password) {
+    Password my_password;
+    bool actual = my_password.has_mixed_case("");
+    ASSERT_EQ(0,actual);
+}
+
+// TEST(PasswordTest, test_set) {
+//   Password my_password;
+//   my_password.set("Mcboss1020!!!");
+//   my_password.set("ChicoCA-95929");
+//   bool actual = my_password.authenticate("ChicoCA-95929");
+//   ASSERT_EQ(false, actual);
 // }
+//jwefohwbweo
 
 
 
-
- /*
-  returns whether the phrase has both at least one upper-case letter and
-  at least one lower-case letter
-  */
-bool has_mixed_case(string) {
-  mystring = string;
+/*
+bool has_mixed_case(string mystring) {
   int upper = 0;
   int lower = 0;
   for(int i = 0; i < mystring.length(); i++) {
-    if(isupper(mystring[i])
+    if(isupper(mystring[i]))
         upper+=1;
-    else if(islower(string[i])
+    else if(islower(string[i]))
         lower+=1;
   }
   if(upper >= 1 && lower >= 1)
@@ -100,3 +104,4 @@ bool has_mixed_case(string) {
   else
     return false;
 }
+*/
